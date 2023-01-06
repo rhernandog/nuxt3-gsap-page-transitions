@@ -18,7 +18,6 @@ watch(
   (newValue) => {
     if (newValue) {
       ctx.value = gsap.context((self) => {
-        console.log("transition complete watcher scroll page")
         const boxes = self.selector(".box");
         boxes.forEach((box) => {
           gsap.to(box, {

@@ -8,7 +8,6 @@ const pageTransition = {
   name: 'page-transiton',
   mode: 'out-in',
   onEnter: (el, done) => {
-    console.log("TRANSITION ON ENTER");
     gsap.set(el, { autoAlpha: 0, scale: 0.8, xPercent: -100 });
     gsap
       .timeline({
@@ -23,7 +22,6 @@ const pageTransition = {
       .play();
   },
   onLeave: (el, done) => {
-    console.log("TRANSITION ON LEAVE+++");
     toggleTransitionComplete(false);
     gsap
       .timeline({ paused: true, onComplete: done })
